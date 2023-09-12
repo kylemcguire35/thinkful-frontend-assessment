@@ -56,6 +56,10 @@ main img {
   display: block;
 }
 
+#host .item {
+  display: block;
+}
+
 .item-double {
   flex: 2;
 }
