@@ -23,6 +23,7 @@ p {
 
 section {
   padding: 20px;
+  margin: 0;
 }
 
 section.alternate-background {
@@ -31,7 +32,8 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
+  padding: 15px 0;
 }
 
 /* ---  Groups & Items --- */
@@ -39,11 +41,19 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .item {
   flex: 1;
   margin: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#ideas .item {
+  display: block;
 }
 
 .item-double {
@@ -56,6 +66,10 @@ header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
+}
+
+nav ul {
+  display: flex;
 }
 
 .logo {
@@ -82,7 +96,7 @@ header nav ul li a:hover {
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 form label {
@@ -117,3 +131,22 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 768px) {
+  .group {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #ideas .item {
+    display: block;
+  }
+
+  #host .item {
+    display: block;
+  }
+
+  header {
+    justify-content: space-between;
+  }
+}
